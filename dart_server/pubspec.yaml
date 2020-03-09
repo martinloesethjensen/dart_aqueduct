@@ -1,0 +1,14 @@
+name: dart_server
+description: Aqueduct dictionary application
+version: 0.0.1
+author: Martin <martinloesethjensen@gmail.com>
+
+environment:
+  sdk: ">=2.6.0 <3.0.0"
+
+dependencies:
+  aqueduct: ^3.2.1
+
+dev_dependencies:
+  test: ^1.0.0
+  aqueduct_test: ^1.0.0
