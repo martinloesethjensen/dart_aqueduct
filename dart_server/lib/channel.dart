@@ -1,3 +1,4 @@
+import 'controllers/words_controller.dart';
 import 'dart_server.dart';
 
 /// This type initializes an application.
@@ -25,12 +26,15 @@ class DartServerChannel extends ApplicationChannel {
   @override
   Controller get entryPoint {
     final router = Router();
+    
+    router.route("/words/[:id]").link(() => WordsController());
 
-    router
-      .route("/example")
-      .linkFunction((request) async {
-        return Response.ok({"key": "value"});
-      });
+//    router
+//      .route("/example")
+//      .linkFunction((request) async {
+//        return Response.ok("Hello World")
+//          ..contentType = ContentType.html;
+//      });
 
     return router;
   }
